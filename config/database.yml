@@ -1,19 +1,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: fake_news_api_development
-  username: postgres
+  database: vote_system_api_development
 test:
   <<: *default
-  database: fake_news_api_test
-  username: postgres
+  database: vote_system_api_test
 production:
   <<: *default
-  database: fake_news_api_production
-  username: fake_news_api
+  database: vote_system_api_production
+  username: theophile
   password: <%= ENV['FAKE_NEWS_API_DATABASE_PASSWORD'] %>
