@@ -47,6 +47,7 @@ DeviseTokenAuth.setup do |config|
   #                        :'expiry' => 'expiry',
   #                        :'uid' => 'uid',
   #                        :'token-type' => 'token-type' }
+  #config.authentication_keys = [:email]
 
   # By default, only Bearer Token authentication is implemented out of the box.
   # If, however, you wish to integrate with legacy Devise authentication, you can

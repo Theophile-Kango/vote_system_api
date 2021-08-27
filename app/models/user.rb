@@ -6,5 +6,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   include DeviseTokenAuth::Concerns::User
+ 
+  enum role: {admin: 1, cp: 2, candidat: 3}
 end 
