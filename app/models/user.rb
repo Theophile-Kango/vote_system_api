@@ -9,5 +9,5 @@ class User < ActiveRecord::Base
 
   include DeviseTokenAuth::Concerns::User
  
-  enum role: {admin: 1, cp: 2, candidat: 3}
+  enum role: {admin: 1, cp: 2, candidate: 3}
 end 

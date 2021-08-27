@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
     end
 
     describe 'role' do
-        it {is_expected.to define_enum_for(:role).with_values({admin: 1, cp: 2, candidat: 3})}
+        it {is_expected.to define_enum_for(:role).with_values({admin: 1, cp: 2, candidate: 3})}
     end
 
     describe 'factory' do
