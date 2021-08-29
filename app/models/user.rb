@@ -11,7 +11,5 @@ class User < ActiveRecord::Base
  
   enum role: {admin: 1, cp: 2, candidate: 3}
 
-  def email_required?
-    false
-  end
+  has_one_attached :image, dependent: destroy
 end 
