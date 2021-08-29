@@ -5,9 +5,13 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, authentication_keys: [:matricule]
 
   include DeviseTokenAuth::Concerns::User
  
   enum role: {admin: 1, cp: 2, candidate: 3}
+
+  def email_required?
+    false
+  end
 end 

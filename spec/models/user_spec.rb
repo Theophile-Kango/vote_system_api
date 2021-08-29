@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
 
     describe 'factory' do
         it 'is expected to have a default factory' do
-            expect(create(:user)).to be_valid
+            expect(create(:admin)).to be_valid
         end
     end
 end

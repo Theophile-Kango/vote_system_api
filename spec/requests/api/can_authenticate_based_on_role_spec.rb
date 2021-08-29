@@ -1,7 +1,7 @@
 RSpec.describe 'POST /api/auth' do
-    let!(:admin) {create(:user, matricule: '12345678', uid: '12345678', role: 'admin',  password: '0956323453')}
-    let!(:cp) {create(:user,matricule: '12345679', uid: '12345679', role: 'cp', password: '0976353453')}
-    let!(:candidate) {create(:user,matricule: '12345279', uid: '12345279', role: 'candidate', password: '0976353453')}
+    let!(:admin) {create(:admin, matricule: '12345678', uid: '12345678', role: 'admin',  password: '0956323453')}
+    let!(:cp) {create(:cp, matricule: '12345679', uid: '12345679', role: 'cp', password: '0976353453')}
+    let!(:candidate) {create(:candidate,matricule: '12345279', uid: '12345279', role: 'candidate', password: '0976353453')}
 
     describe 'User can login with correct credintials' do
         before do

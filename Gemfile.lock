@@ -69,6 +69,7 @@ GEM
     bootsnap (1.7.5)
       msgpack (~> 1.0)
     builder (3.2.4)
+    byebug (11.1.3)
     case_transform (0.2)
       activesupport
     coderay (1.1.3)
@@ -225,6 +226,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   bootsnap (>= 1.4.4)
+  byebug
   coveralls
   devise_token_auth
   factory_bot_rails
