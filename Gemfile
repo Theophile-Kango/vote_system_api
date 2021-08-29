@@ -9,7 +9,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rack-cors', require: 'rack/cors'
 gem 'active_model_serializers'
 gem 'devise_token_auth'
-gem 'byebug'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'shoulda-matchers'
@@ -17,6 +17,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'coveralls', require: false
+  gem 'byebug'
 end
 
 group :development do
