@@ -11,5 +11,4 @@ class User < ActiveRecord::Base
  
   enum role: {admin: 1, cp: 2, candidate: 3}
 
-  has_one_attached :image
 end 
