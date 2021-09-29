@@ -1,7 +1,5 @@
 class Api::SessionsController < DeviseTokenAuth::SessionsController
-    # Unpermitted parameter: session
     
-        # Check
     def create
         field = (resource_params.keys.map(&:to_sym) & resource_class.authentication_keys).first
         q_value = get_case_insensitive_field_from_resource_params(field)
@@ -14,10 +12,5 @@ class Api::SessionsController < DeviseTokenAuth::SessionsController
             super
         end
     end
-
-    # def resource_params
-    #     params.require(:user).permit(:matricule, :password, :password_confirmation)
-    # end
-    # private :resource_params
     
 end

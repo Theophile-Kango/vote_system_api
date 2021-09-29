@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     sessions: "api/sessions",
     registrations: "api/registrations"
   }
-  # namespace :api do
-  #   resources :articles, only: [:index]
-  # end
+  namespace :api do
+    resources :date_vote
+  end
 end
