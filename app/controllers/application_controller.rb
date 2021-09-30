@@ -11,4 +11,9 @@ class ApplicationController < ActionController::API
                 return if current_user.admin?
                 render json: { error_message: "Vous n'êtes pas autorisé de créer un utilisateur" }, status: 403
         end
+
+        def candidate_authenticator
+                return if current_user.candidate?
+                render json: { error_message: "Vous n'êtes pas autorisé" }, status: 403
+        end
 end

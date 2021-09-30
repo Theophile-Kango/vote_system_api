@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   }
   namespace :api do
     resources :date_vote
+    resources :candidate
   end
 end
