@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable, authentication_keys: [:matricule]
 
   include DeviseTokenAuth::Concerns::User
+  has_one :vote
  
   enum role: {admin: 1, cp: 2, candidate: 3}
 
