@@ -1,6 +1,6 @@
 production:
-  cloud_name: "davfa9wey"
-  api_key: "739564135482128"
-  api_secret: "DT0Ea3M2ulvpLAlFJqTvSZCnWEc"
+  cloud_name: <%= ENV['CLOUD_NAME'] %>
+  api_key: <%= ENV['API_KEY'] %>
+  api_secret: <%= ENV['API_SECRET'] %>
   secure: true
   cdn_subdomain: true
