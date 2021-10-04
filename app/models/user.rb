@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   include DeviseTokenAuth::Concerns::User
   has_one :vote
+
+  #validates_uniqueness_of :nom, scope: %i[post_nom prenom]
  
   enum role: {admin: 1, cp: 2, candidate: 3}
 

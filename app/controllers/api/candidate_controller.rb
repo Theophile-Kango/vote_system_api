@@ -9,13 +9,13 @@ class Api::CandidateController < ApplicationController
     end
 
     def create 
-        candidat = Candidat.create(nom: params[:nom], post_nom: params[:post_nom], prenom: params[:prenom], promotion: params[:promotion], description: params[:description], user_id: params[:user_id])
+        candidat = Candidat.create(description: params[:description], user_id: params[:user_id])
         render json: candidat
     end
 
     def update
         candidat = Candidat.find(params[:candidat])
-        candidat.update(nom: params[:nom], post_nom: params[:post_nom], prenom: params[:prenom], promotion: params[:promotion], description: params[:description], user_id: params[:user_id])
+        candidat.update(description: params[:description], user_id: params[:user_id])
         render json: candidat
     end
 

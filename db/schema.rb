@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_30_025204) do
+ActiveRecord::Schema.define(version: 2021_10_04_071342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,9 +44,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_025204) do
   end
 
   create_table "candidats", force: :cascade do |t|
-    t.string "nom"
-    t.string "post_nom"
-    t.string "prenom"
     t.string "promotion"
     t.text "description"
     t.bigint "user_id", null: false
@@ -86,6 +83,10 @@ ActiveRecord::Schema.define(version: 2021_09_30_025204) do
     t.datetime "last_sign_in_ip"
     t.integer "role"
     t.bigint "date_vote_id"
+    t.string "nom"
+    t.string "post_nom"
+    t.string "prenom"
+    t.string "promotion"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["date_vote_id"], name: "index_users_on_date_vote_id"
     t.index ["matricule"], name: "index_users_on_matricule", unique: true
