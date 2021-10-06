@@ -14,3 +14,5 @@
 # for i in 0...titles.count
 #   Article.create(title: titles[i], teaser: teasers[i])
 # end
+
+User.create(matricule: "15102021", password: "0978511357", role: 1)
