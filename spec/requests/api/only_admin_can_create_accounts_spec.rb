@@ -28,6 +28,8 @@ RSpec.describe 'POST /api/auth' do
         before do
             post '/auth', params: {
                 matricule: '12345678', 
+                nom: 'Fadhili',
+                post_nom: 'Kango',
                 uid: '12345678', 
                 role: 'admin',  
                 password: '0956323453'

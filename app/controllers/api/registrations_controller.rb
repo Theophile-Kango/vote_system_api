@@ -6,11 +6,19 @@ class Api::RegistrationsController < DeviseTokenAuth::RegistrationsController
     before_action :admin_authenticator!
 
     def create
-      @resource = User.new(matricule: params[:matricule],password: params[:password],role: params[:role], uid: params[:matricule])
-      unless @resource.save
-       render json: { message: @resource.errors.full_messages.join(', ') }, status: :bad_request
-       return
-      end
+      @resource = User.create!(
+        matricule: params[:matricule],
+        nom: params[:nom],
+        post_nom: params[:post_nom],
+        prenom: params[:prenom],
+        password: params[:password],
+        role: params[:role], 
+        uid: params[:matricule]
+      )
+      # unless @resource.save
+      #  render json: { message: @resource.errors.full_messages.join(', ') }, status: :bad_request
+      #  return
+      # end
    
       @token = @resource.create_token
       @resource.save
