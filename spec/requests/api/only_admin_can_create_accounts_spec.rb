@@ -6,7 +6,7 @@ RSpec.describe 'POST /api/auth' do
     let(:auth_headers_cp) { cp.create_new_auth_token }
     
     
-    describe 'Non admin users can not create new date_vote' do
+    describe 'Non admin users can not create new User' do
         before do
             post '/auth', params: {
                 matricule: '12345678', 
@@ -23,7 +23,7 @@ RSpec.describe 'POST /api/auth' do
         
     end
 
-    describe 'Admin user can create a new date_vote' do
+    describe 'Admin user can create a new User' do
 
         before do
             post '/auth', params: {
@@ -35,8 +35,8 @@ RSpec.describe 'POST /api/auth' do
             headers: auth_headers
         end
 
-        it 'is expected to return a 204 status' do
-            expect(response).to have_http_status 204
+        it 'is expected to return a 200 status' do
+            expect(response).to have_http_status 200
         end
     end
 end

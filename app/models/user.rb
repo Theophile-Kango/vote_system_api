@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_one :vote
 
   #validates_uniqueness_of :nom, scope: %i[post_nom prenom]
+  validates_presence_of :role, :uid, :matricule
  
   enum role: {admin: 1, cp: 2, candidate: 3}
 
