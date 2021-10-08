@@ -1,4 +1,4 @@
-class VoteController < ApplicationController
+class Api::VoteController < ApplicationController
     before_action :authenticate_user!
 
     def index 
