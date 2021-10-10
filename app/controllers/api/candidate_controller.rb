@@ -9,7 +9,8 @@ class Api::CandidateController < ApplicationController
     end
 
     def create 
-        candidat = Candidat.create(description: params[:description], user_id: params[:user_id], image: params[:image])
+        image = Cloudinary::Uploader.upload(params[:image])
+        candidat = Candidat.create(description: params[:description], user_id: params[:user_id], image: image["url"]))
         render json: candidat
     end
 
