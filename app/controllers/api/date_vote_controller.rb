@@ -12,7 +12,7 @@ class Api::DateVoteController < ApplicationController
                 params[:is_valid] = true
             end
         end 
-        date = DateVote.create(date_debut: params[:date_debut], date_fin: params[:date_fin], is_valid: params[:is_valid])
+        date = DateVote.create!(date_debut: params[:date_debut], date_fin: params[:date_fin], is_valid: params[:is_valid])
         render json: date
     end
 

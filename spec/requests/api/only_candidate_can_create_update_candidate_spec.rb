@@ -9,9 +9,6 @@ RSpec.describe 'POST /api/date_vote' do
 
         before do
             post '/api/candidate', params: {
-                nom: "Fadhili",
-                post_nom: "Kango",
-                prenom: "Theophile",
                 promotion: "L2",
                 description: "Candidat a la deputation nationale",
                 user_id: 1

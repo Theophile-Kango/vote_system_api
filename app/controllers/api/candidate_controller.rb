@@ -9,7 +9,7 @@ class Api::CandidateController < ApplicationController
     end
 
     def create 
-        candidat = Candidat.create(description: params[:description], user_id: params[:user_id])
+        candidat = Candidat.create(description: params[:description], user_id: params[:user_id], image: params[:image])
         render json: candidat
     end
 
