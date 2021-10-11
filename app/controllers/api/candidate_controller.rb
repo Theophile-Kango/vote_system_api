@@ -10,7 +10,6 @@ class Api::CandidateController < ApplicationController
 
     def create 
         image = Cloudinary::Uploader.upload(params[:image])
-        byebug
         candidat = Candidat.create(description: params[:description], user_id: params[:user_id], image: image["url"])
         
         render json: candidat

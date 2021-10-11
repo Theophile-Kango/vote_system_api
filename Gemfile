@@ -18,9 +18,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'coveralls', require: false
   gem 'dotenv-rails'
-  
+  gem 'byebug'
 end
-gem 'byebug'
+
 group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
