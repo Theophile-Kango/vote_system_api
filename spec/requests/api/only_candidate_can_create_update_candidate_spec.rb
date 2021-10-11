@@ -9,7 +9,6 @@ RSpec.describe 'POST /api/date_vote' do
 
         before do
             post '/api/candidate', params: {
-                promotion: "L2",
                 description: "Candidat a la deputation nationale",
                 user_id: 1
             },
@@ -25,11 +24,8 @@ RSpec.describe 'POST /api/date_vote' do
 
         before do
             post '/api/candidate', params: {
-                nom: "Fadhili",
-                post_nom: "Kango",
-                prenom: "Theophile",
-                promotion: "L2",
                 description: "Candidat a la deputation nationale",
+                image: "app/assets/image/vote_system.png",
                 user_id: 1
             },
             headers: candidate_headers

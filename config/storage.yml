@@ -1,9 +1,9 @@
 test:
-  service: Disk
+  service: Cloudinary
   root: <%= Rails.root.join("tmp/storage") %>
 
 local:
-  service: Disk
+  service: Cloudinary
   root: <%= Rails.root.join("storage") %>
 
 cloudinary:
