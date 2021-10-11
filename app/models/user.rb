@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   include DeviseTokenAuth::Concerns::User
   has_one :vote
+  has_one :candidat
 
   validates_uniqueness_of :nom, scope: %i[post_nom prenom]
   validates_presence_of :nom, :post_nom, :role, :uid, :matricule
