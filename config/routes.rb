@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :date_vote
     resources :candidate
-    get 'list_users', to: 'application#users', as: 'users'
+    get 'list_users', to: 'candidate#users', as: 'users'
   end
 
 end

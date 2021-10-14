@@ -1,10 +1,7 @@
-class Api::ApplicationController < ActionController::API
+class   ApplicationController < ActionController::API
         include DeviseTokenAuth::Concerns::SetUserByToken
-        before_action  :authenticate_user!
 
-        def users 
-           render json: User.all
-        end
+        
 
         protected
         def find_resource(field, q_value)
