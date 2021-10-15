@@ -6,8 +6,8 @@ class Api::VoteController < ApplicationController
         render json: votes
     end
 
-    def create 
-        vote = Vote.create(user_id: params[:user_id], date_vote_id: params[:date_vote_id], candidat_id: params[:candidat])
+    def create
+        vote = Vote.create!(user_id: params[:user_id], candidat_id: params[:candidat_id])
         render json: vote
     end
 end
