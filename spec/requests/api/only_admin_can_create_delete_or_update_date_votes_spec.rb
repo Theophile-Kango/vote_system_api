@@ -25,6 +25,7 @@ RSpec.describe 'POST /api/date_vote' do
 
         before do
             post '/api/date_vote', params: {
+                title: "Vote PP 2021",
                 date_debut: "2021-09-29 10:00:00",
                 date_fin: "2021-09-29 12:00:00"
             },

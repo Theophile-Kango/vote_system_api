@@ -1,5 +1,6 @@
 class DateVote < ApplicationRecord
-    validates_presence_of :date_debut, :date_fin
+    validates_presence_of :date_debut, :date_fin, :title 
+    validates_uniqueness_of :title
     validate :end_date_is_after_start_date
 
     def end_date_is_after_start_date
