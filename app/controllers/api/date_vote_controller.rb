@@ -1,6 +1,11 @@
 class Api::DateVoteController < ApplicationController
     before_action :authenticate_user!
     before_action :admin_authenticator, expect: [:show]
+
+    def index 
+        date_votes = DateVote.all 
+        render json: date_votes
+    end
     
     def show 
         @date_vote = DateVote.find(params[:id]) 
