@@ -13,7 +13,8 @@ class Api::RegistrationsController < DeviseTokenAuth::RegistrationsController
         prenom: params[:prenom],
         password: params[:password],
         role: params[:role], 
-        uid: params[:matricule]
+        uid: params[:matricule],
+        date_vote_id: params[:date_vote_id]
       )
       # unless @resource.save
       #  render json: { message: @resource.errors.full_messages.join(', ') }, status: :bad_request

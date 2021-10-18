@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
   has_one :vote
   has_one :candidat
+  has_many :date_votes
+  accepts_nested_attributes_for :date_votes
 
   validates_uniqueness_of :nom, scope: %i[post_nom prenom]
   validates_presence_of :nom, :post_nom, :role, :uid, :matricule
