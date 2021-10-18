@@ -15,4 +15,4 @@
 #   Article.create(title: titles[i], teaser: teasers[i])
 # end
 
-User.create(matricule: "15102021", password: "0978511357", role: 1)
+User.create!(matricule: "15102021", uid: "15102021", nom: "Theophhile", post_nom: "Kango", password: "0978511357", role: 1, date_vote_id: 3)

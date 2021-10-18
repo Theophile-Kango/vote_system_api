@@ -31,7 +31,7 @@ RSpec.describe 'POST /api/auth' do
                 nom: 'Fadhili',
                 post_nom: 'Kango',
                 uid: '12345678', 
-                role: 'admin',  
+                role: 'admin', 
                 password: '0956323453'
             },
             headers: auth_headers
@@ -39,6 +39,24 @@ RSpec.describe 'POST /api/auth' do
 
         it 'is expected to return a 200 status' do
             expect(response).to have_http_status 200
+        end
+    end
+    describe 'Admin user can delete a User' do
+
+        before do
+            delete '/auth', params: {
+               matricule: '12345678', 
+               nom: 'Fadhili',
+               post_nom: 'Kango',
+               uid: '12345678', 
+               role: 'admin',  
+               password: '0956323453' 
+            },
+            headers: auth_headers
+        end
+
+        it 'is expected to return a 204 status' do
+            expect(response).to have_http_status 204
         end
     end
 end

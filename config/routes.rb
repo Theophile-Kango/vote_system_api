@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :candidate
     resources :vote
     get 'list_users', to: 'candidate#users', as: 'users'
+    #delete 'user/:id', to: 'registrations#destroy', as: 'delete_user'
   end
 
 end

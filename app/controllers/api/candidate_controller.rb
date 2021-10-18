@@ -1,6 +1,6 @@
 class Api::CandidateController < ApplicationController
     before_action :authenticate_user!
-    before_action :candidate_authenticator || :admin_authenticator, only: [:create, :update, :delete]
+    before_action :candidate_authenticator || :admin_authenticator, only: [:create]
 
     def index 
         candidats = Candidat.all

@@ -28,6 +28,12 @@ class Api::RegistrationsController < DeviseTokenAuth::RegistrationsController
       render_create_success
      end
 
+     def destroy
+       user = User.find(params[:user][:id])
+       user.destroy
+     end
+
+
     protected
 
     def admin_authenticator!
