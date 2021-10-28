@@ -3,7 +3,7 @@ class Api::RegistrationsController < DeviseTokenAuth::RegistrationsController
     #prepend_before_action :authenticate_scope!, only: [:new, :create, :edit, :update, :destroy]
     
     before_action :authenticate_user!
-    before_action :admin_authenticator!
+    #before_action :admin_authenticator!
 
     def create
       @resource = User.create!(

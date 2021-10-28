@@ -1,6 +1,6 @@
 class Api::DateVoteController < ApplicationController
     before_action :authenticate_user!
-    before_action :admin_authenticator, expect: [:show]
+    #before_action :admin_authenticator, expect: [:show]
 
     def index 
         date_votes = DateVote.all 

@@ -17,4 +17,9 @@ class   ApplicationController < ActionController::API
                 return if current_user.candidate?
                 render json: { error_message: "Vous n'êtes pas autorisé" }, status: 403
         end
+
+        protected
+        def authenticate_user!
+                redirect_to root_path, notice: "You must login" unless user_signed_in?
+        end
 end
